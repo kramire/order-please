@@ -34,6 +34,20 @@
 function urOrderPls(inputStr) {
   // your code here
 
+  if (inputStr === '') return '';
+
+  let words = inputStr.split(' ');
+  let newArr = [];
+
+  words.forEach( function (word) {
+    const num = word.match(/\d/)[0];
+    newArr[num] = word;
+  });
+
+  newArr = newArr.splice(1);
+
+  return newArr.join(' ');
+
 
 }
 
